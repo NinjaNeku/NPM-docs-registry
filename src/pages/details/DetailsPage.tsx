@@ -18,6 +18,14 @@ export default function DetailsPage(){
         </div>
         <div>
             <h3 className="text-lg font-bold">
+                ReadMe file
+            </h3>
+            <div className="p-3 bg-gray-200 rounded">
+                {details.readme ? details.readme : "No ReadMe file available"}
+            </div>
+        </div>
+        <div>
+            <h3 className="text-lg font-bold">
                 License
             </h3>
             <div className="p-3 bg-gray-200 rounded">
@@ -30,6 +38,14 @@ export default function DetailsPage(){
             </h3>
             <div className="p-3 bg-gray-200 rounded">
                  {details.author?.name || "No definite author specified"}
+            </div>
+        </div>
+        <div>
+            <h3 className="text-lg font-bold">
+                Maintainers
+            </h3>
+            <div className="p-3 bg-gray-200 rounded">
+                {details.maintainers.map((maintainer) => maintainer.name).join(", ")}
             </div>
         </div>
     </div>
